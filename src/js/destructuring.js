@@ -1,6 +1,6 @@
-export default function destruction(obj) {
+export default function destruction({ special }) {
   const arrOfProperties = [];
-  obj.special.forEach((versionOfAttack) => {
+  special.forEach((versionOfAttack) => {
     const wrapperForVersionOfAttack = [];
     if (!Object.keys(versionOfAttack).includes('description')) {
       versionOfAttack.description = 'Описание недоступно';
