@@ -1,17 +1,10 @@
 export default function destruction({ special }) {
   const arrOfProperties = [];
   special.forEach((versionOfAttack) => {
-    const wrapperForVersionOfAttack = [];
-    if (!Object.keys(versionOfAttack).includes('description')) {
-      versionOfAttack.description = 'Описание недоступно';
-    }
-
-    for (const keys in versionOfAttack) {
-      if (Object.prototype.hasOwnProperty.call(versionOfAttack, keys)) {
-        wrapperForVersionOfAttack.push({ [keys]: versionOfAttack[keys] });
-      }
-    }
-    arrOfProperties.push(wrapperForVersionOfAttack);
+    const {
+      id, name, icon, description = 'Описание недоступно',
+    } = versionOfAttack;
+    arrOfProperties.push({ id }, { name }, { icon }, { description });
   });
 
   return arrOfProperties;

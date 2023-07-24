@@ -1,5 +1,3 @@
-import destruction from './destructuring';
-
 const character = {
   name: 'Лучник',
   type: 'Bowman',
@@ -23,5 +21,3 @@ const character = {
 };
 
 export default character;
-
-console.log(destruction(character));

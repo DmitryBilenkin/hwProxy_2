@@ -13,5 +13,5 @@ test('charTest', () => {
       }],
   };
   const result = destruction(charTest);
-  expect(result).toEqual([[{ id: 8 }, { name: 'Двойной выстрел' }, { icon: 'http://...' }, { description: 'Описание недоступно' }]]);
+  expect(result).toEqual([{ id: 8 }, { name: 'Двойной выстрел' }, { icon: 'http://...' }, { description: 'Описание недоступно' }]);
 });
